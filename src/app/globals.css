@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/*
+  Zentra Financial — "The Plate" direction.
+  Palette is deliberately limited to what exists in the approved logo
+  package: true black/white/gray, the brand teal (#0f705f), and the
+  deeper teal used as the Solid-Vertical lockup's fill (#124640). No
+  other hues. This is a fixed dark identity, not a light/dark toggle —
+  see 01_Brand for the source lockups.
+*/
+:root {
+  --bg: #000000;
+  --fg: #ffffff;
+  --fg-soft: #9a9a9b;
+  --line: #232323;
+  --accent: #0f705f;
+  --plate: #124640;
+
+  --font-body: -apple-system, "Segoe UI", system-ui, Roboto, sans-serif;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-fg-soft: var(--fg-soft);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-plate: var(--plate);
+  --font-display: var(--font-jost);
+  --font-body: var(--font-body);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
