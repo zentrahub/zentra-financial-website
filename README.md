@@ -36,15 +36,22 @@ exists in the approved logo package: black, white, gray, and the two teals
 ## Consultation form
 
 Submissions POST to `src/app/api/consultation/route.ts`, which emails the
-request to `hello@zentrafinancial.com` via Gmail SMTP (nodemailer),
-authenticated as whatever account you put in `GMAIL_USER` — not a new
-third-party vendor, not REOS's credentials (those are a separate Google
-Cloud OAuth app tied to Bradley Capital Group's connected mailbox; reusing
-them here would cross the two clients' infrastructure). Copy
-`.env.example` to `.env.local` and fill in `GMAIL_USER` +
-`GMAIL_APP_PASSWORD` (a Gmail App Password, not your login password) to
-make it live. Until then the API route responds with a clear 503 instead
-of silently pretending to succeed.
+request to `hello@zentrafinancial.com` (an alias on `jorge@zentrafinancial.com`)
+via Gmail SMTP (nodemailer) — not a new third-party vendor, not REOS's
+credentials (those are a separate Google Cloud OAuth app tied to Bradley
+Capital Group's connected mailbox; reusing them here would cross the two
+clients' infrastructure).
+
+**Working locally** — `.env.local` has real `GMAIL_USER` /
+`GMAIL_APP_PASSWORD` values (gitignored, never committed). Verified
+2026-08-10: submitted a real request through the dialog, server logged
+`POST /api/consultation 200`, and the dialog showed the success state.
+
+**Still needed for production:** add the same `GMAIL_USER` /
+`GMAIL_APP_PASSWORD` values as environment variables in the Vercel project
+once it exists — `.env.local` only affects this machine. See
+`.env.example` for the variable names, and `DEPLOYMENT.md` for the rest of
+the launch steps.
 
 ## Known gaps
 
