@@ -1,3 +1,4 @@
+import Link from "next/link";
 import WordMark from "./marks/WordMark";
 import ConsultationButton from "./ConsultationButton";
 
@@ -29,18 +30,18 @@ export default function Footer() {
           >
             Client Portal
           </a>
-          <a
-            href="#"
+          <Link
+            href="/privacy"
             className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
             Privacy
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/terms"
             className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
             Terms
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
