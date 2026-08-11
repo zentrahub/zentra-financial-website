@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import LegalPlaceholder from "@/components/LegalPlaceholder";
+import { getMessages } from "@/i18n";
 
-export const metadata: Metadata = { title: "Terms of Service" };
+const t = getMessages();
+
+export const metadata: Metadata = { title: t.legalPlaceholder.termsTitle };
 
 export default function TermsPage() {
-  return <LegalPlaceholder title="Terms of Service" />;
+  return <LegalPlaceholder title={t.legalPlaceholder.termsTitle} />;
 }

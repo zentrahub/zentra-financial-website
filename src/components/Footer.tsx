@@ -1,8 +1,11 @@
 import Link from "next/link";
 import WordMark from "./marks/WordMark";
 import ConsultationButton from "./ConsultationButton";
+import { getMessages } from "@/i18n";
 
 export default function Footer() {
+  const t = getMessages();
+
   return (
     <footer className="border-t border-line px-6 py-8 sm:px-10">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6">
@@ -12,35 +15,35 @@ export default function Footer() {
             href="/#expertise"
             className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
-            Expertise
+            {t.footer.expertise}
           </Link>
           <Link
             href="/#about"
             className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
-            About
+            {t.footer.about}
           </Link>
           <ConsultationButton className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg">
-            Private Consultation
+            {t.footer.privateConsultation}
           </ConsultationButton>
           {/* TODO: point at the firm's TaxDome tenant URL once available */}
           <a
             href="#"
             className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
-            Client Portal
+            {t.footer.clientPortal}
           </a>
           <Link
             href="/privacy"
             className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
-            Privacy
+            {t.footer.privacy}
           </Link>
           <Link
             href="/terms"
             className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
-            Terms
+            {t.footer.terms}
           </Link>
         </div>
       </div>

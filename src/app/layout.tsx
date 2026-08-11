@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import { ConsultationProvider } from "@/components/ConsultationProvider";
+import { getMessages } from "@/i18n";
 import "./globals.css";
 
 // Heading face — thin, wide, geometric, echoing the wordmark's own
@@ -13,15 +14,15 @@ const jost = Jost({
 });
 
 const siteUrl = "https://www.zentrafinancial.com";
+const t = getMessages();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Zentra Financial — Premium Tax Strategy & Financial Advisory",
+    default: t.meta.title,
     template: "%s — Zentra Financial",
   },
-  description:
-    "Zentra Financial advises established business owners on tax strategy, financial structure, and business architecture, in the United States and abroad.",
+  description: t.meta.description,
   alternates: {
     canonical: "/",
   },
@@ -29,15 +30,13 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Zentra Financial",
-    title: "Zentra Financial — Premium Tax Strategy & Financial Advisory",
-    description:
-      "Zentra Financial advises established business owners on tax strategy, financial structure, and business architecture, in the United States and abroad.",
+    title: t.meta.title,
+    description: t.meta.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zentra Financial — Premium Tax Strategy & Financial Advisory",
-    description:
-      "Zentra Financial advises established business owners on tax strategy, financial structure, and business architecture, in the United States and abroad.",
+    title: t.meta.title,
+    description: t.meta.description,
   },
 };
 
@@ -45,8 +44,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Zentra Financial",
-  description:
-    "Premium tax strategy and financial advisory for established business owners.",
+  description: t.meta.jsonLdDescription,
   url: siteUrl,
   areaServed: ["US", "International"],
   priceRange: "$$$$",

@@ -4,10 +4,11 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ConsultationButton from "@/components/ConsultationButton";
-import { SERVICES, getService } from "@/lib/services";
+import { SERVICE_SLUGS, isServiceSlug } from "@/lib/services";
+import { getMessages } from "@/i18n";
 
 export function generateStaticParams() {
-  return SERVICES.map((s) => ({ slug: s.slug }));
+  return SERVICE_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -16,8 +17,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const service = getService(slug);
-  if (!service) return {};
+  if (!isServiceSlug(slug)) return {};
+  const service = getMessages().services[slug];
   return {
     title: service.name,
     description: service.shortDescription,
@@ -30,10 +31,11 @@ export default async function ServicePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const service = getService(slug);
-  if (!service) notFound();
+  if (!isServiceSlug(slug)) notFound();
 
-  const otherServices = SERVICES.filter((s) => s.slug !== slug);
+  const t = getMessages();
+  const service = t.services[slug];
+  const otherSlugs = SERVICE_SLUGS.filter((s) => s !== slug);
 
   return (
     <>
@@ -44,7 +46,7 @@ export default async function ServicePage({
             href="/#expertise"
             className="mb-10 inline-block text-xs font-light tracking-[0.08em] text-fg-soft uppercase transition hover:text-fg"
           >
-            ← Expertise
+            {t.servicesIndex.backToExpertise}
           </Link>
           <p className="mb-6 text-[0.68rem] font-light tracking-[0.2em] text-accent uppercase">
             {service.kicker}
@@ -57,18 +59,18 @@ export default async function ServicePage({
           </p>
           <div className="mt-10">
             <ConsultationButton className="bg-accent px-8 py-4 text-xs font-normal tracking-[0.12em] text-white uppercase">
-              Request a Private Consultation
+              {t.hero.primaryCta}
             </ConsultationButton>
           </div>
         </section>
 
         <section className="border-t border-line px-6 py-16 sm:px-10 md:py-20">
           <p className="mx-auto mb-10 max-w-3xl text-[0.62rem] font-light tracking-[0.2em] text-fg-soft uppercase">
-            What This Covers
+            {t.servicesIndex.whatThisCovers}
           </p>
           <div className="mx-auto grid max-w-3xl grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
-            {service.covers.map((item) => (
-              <div key={item.title}>
+            {service.covers.map((item, i) => (
+              <div key={i}>
                 <h2 className="font-display mb-2 text-base font-normal">
                   {item.title}
                 </h2>
@@ -82,7 +84,7 @@ export default async function ServicePage({
 
         <section className="border-t border-line px-6 py-16 text-center sm:px-10">
           <p className="mx-auto mb-6 text-[0.62rem] font-light tracking-[0.2em] text-fg-soft uppercase">
-            Who It&rsquo;s For
+            {t.servicesIndex.whoItsFor}
           </p>
           <p className="mx-auto max-w-xl text-lg font-light text-balance">
             {service.whoItsFor}
@@ -91,38 +93,36 @@ export default async function ServicePage({
 
         <section className="border-t border-line px-6 py-16 text-center sm:px-10">
           <h2 className="font-display text-2xl font-thin sm:text-3xl">
-            Not every client needs Zentra.
+            {t.selectiveEngagement.headline}
           </h2>
           <p className="mx-auto mt-5 max-w-md text-sm font-light text-fg-soft">
-            Our work is most valuable when a business has reached a level
-            where tax decisions, financial structure and entity strategy can
-            materially affect the owner&rsquo;s outcome.
+            {t.selectiveEngagement.body}
           </p>
           <div className="mt-8">
             <ConsultationButton className="bg-accent px-8 py-4 text-xs font-normal tracking-[0.12em] text-white uppercase">
-              Request a Private Consultation
+              {t.hero.primaryCta}
             </ConsultationButton>
           </div>
         </section>
 
         <section className="border-t border-line px-6 py-16 sm:px-10 md:py-20">
           <p className="mx-auto mb-10 max-w-5xl text-center text-[0.62rem] font-light tracking-[0.2em] text-fg-soft uppercase">
-            Other Areas
+            {t.servicesIndex.otherAreas}
           </p>
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-y-8 sm:grid-cols-3">
-            {otherServices.map((s, i) => (
+            {otherSlugs.map((s, i) => (
               <Link
-                key={s.slug}
-                href={`/services/${s.slug}`}
+                key={s}
+                href={`/services/${s}`}
                 className={`group text-center sm:px-6 ${
                   i > 0 ? "sm:border-l sm:border-line" : ""
                 }`}
               >
                 <p className="mb-2 text-[0.64rem] font-light text-fg-soft">
-                  {s.idx}
+                  {t.services[s].idx}
                 </p>
                 <h3 className="font-display text-base font-extralight underline-offset-4 group-hover:underline">
-                  {s.name}
+                  {t.services[s].name}
                 </h3>
               </Link>
             ))}
