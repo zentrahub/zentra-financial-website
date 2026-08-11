@@ -75,7 +75,7 @@ export function ConsultationProvider({ children }: { children: ReactNode }) {
               <h3 className="font-display text-2xl font-extralight">
                 {t.title}
               </h3>
-              <p className="mt-1 text-sm font-light text-fg-soft">
+              <p className="mt-1 text-sm font-normal leading-relaxed text-fg-soft">
                 {t.subtitle}
               </p>
             </div>
@@ -94,7 +94,7 @@ export function ConsultationProvider({ children }: { children: ReactNode }) {
               <p className="font-display text-xl font-extralight">
                 {t.success.title}
               </p>
-              <p className="mt-2 text-sm font-light text-fg-soft">
+              <p className="mt-2 text-sm font-normal leading-relaxed text-fg-soft">
                 {t.success.body}
               </p>
               <button
@@ -148,7 +148,7 @@ export function ConsultationProvider({ children }: { children: ReactNode }) {
                   {status === "submitting" ? t.submitting : t.submit}
                 </button>
                 {status === "error" && (
-                  <p className="mt-3 text-xs font-light text-fg-soft">
+                  <p className="mt-3 text-xs font-normal text-fg-soft">
                     {errorMessage}
                   </p>
                 )}
@@ -190,7 +190,7 @@ function Field({
     <div className={full ? "col-span-full" : undefined}>
       <label
         htmlFor={fieldId(name)}
-        className="mb-2 block text-[0.62rem] font-light tracking-[0.1em] text-fg-soft uppercase"
+        className="mb-2 block text-[0.62rem] font-normal tracking-[0.1em] text-fg-soft uppercase"
       >
         {label}
         {required && " *"}
@@ -219,7 +219,7 @@ function TextAreaField({
     <div className={full ? "col-span-full" : undefined}>
       <label
         htmlFor={fieldId(name)}
-        className="mb-2 block text-[0.62rem] font-light tracking-[0.1em] text-fg-soft uppercase"
+        className="mb-2 block text-[0.62rem] font-normal tracking-[0.1em] text-fg-soft uppercase"
       >
         {label}
       </label>
@@ -248,7 +248,7 @@ function SelectField({
     <div>
       <label
         htmlFor={fieldId(name)}
-        className="mb-2 block text-[0.62rem] font-light tracking-[0.1em] text-fg-soft uppercase"
+        className="mb-2 block text-[0.62rem] font-normal tracking-[0.1em] text-fg-soft uppercase"
       >
         {label}
       </label>

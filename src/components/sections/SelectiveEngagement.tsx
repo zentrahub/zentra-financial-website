@@ -9,7 +9,7 @@ export default function SelectiveEngagement() {
       <h2 className="font-display text-3xl font-thin sm:text-4xl">
         {t.selectiveEngagement.headline}
       </h2>
-      <p className="mx-auto mt-5 max-w-md text-sm font-light text-fg-soft">
+      <p className="mx-auto mt-5 max-w-md text-sm font-normal leading-relaxed text-fg-soft">
         {t.selectiveEngagement.body}
       </p>
       <div className="mt-8">
@@ -17,7 +17,7 @@ export default function SelectiveEngagement() {
           {t.selectiveEngagement.cta}
         </ConsultationButton>
       </div>
-      <p className="mx-auto mt-6 max-w-sm text-sm font-light text-fg-soft italic">
+      <p className="mx-auto mt-6 max-w-sm text-sm font-normal leading-relaxed text-fg-soft italic">
         {t.selectiveEngagement.fineprint}
       </p>
     </section>

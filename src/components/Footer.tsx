@@ -13,35 +13,35 @@ export default function Footer() {
         <div className="flex flex-wrap gap-6">
           <Link
             href="/#expertise"
-            className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
+            className="text-[0.64rem] font-normal tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
             {t.footer.expertise}
           </Link>
           <Link
             href="/#about"
-            className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
+            className="text-[0.64rem] font-normal tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
             {t.footer.about}
           </Link>
-          <ConsultationButton className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg">
+          <ConsultationButton className="text-[0.64rem] font-normal tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg">
             {t.footer.privateConsultation}
           </ConsultationButton>
           {/* TODO: point at the firm's TaxDome tenant URL once available */}
           <a
             href="#"
-            className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
+            className="text-[0.64rem] font-normal tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
             {t.footer.clientPortal}
           </a>
           <Link
             href="/privacy"
-            className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
+            className="text-[0.64rem] font-normal tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
             {t.footer.privacy}
           </Link>
           <Link
             href="/terms"
-            className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
+            className="text-[0.64rem] font-normal tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
             {t.footer.terms}
           </Link>

@@ -12,13 +12,13 @@ export default function Hero() {
       </div>
 
       <div className="flex flex-col justify-center px-6 py-16 sm:px-10 md:px-16 md:py-0">
-        <p className="mb-6 text-[0.68rem] font-light tracking-[0.2em] text-accent uppercase">
+        <p className="mb-6 text-[0.68rem] font-normal tracking-[0.2em] text-accent uppercase">
           {t.hero.kicker}
         </p>
         <h1 className="font-display max-w-xl text-4xl leading-[1.05] font-thin text-balance sm:text-5xl md:text-6xl">
           {t.hero.headline}
         </h1>
-        <p className="mt-6 max-w-md text-base font-light text-fg-soft">
+        <p className="mt-6 max-w-md text-base font-normal leading-relaxed text-fg-soft">
           {t.hero.sub}
         </p>
 
@@ -28,13 +28,13 @@ export default function Hero() {
           </ConsultationButton>
           <a
             href="#expertise"
-            className="border-b border-fg pb-0.5 text-xs font-light tracking-[0.08em] text-fg uppercase"
+            className="border-b border-fg pb-0.5 text-xs font-normal tracking-[0.08em] text-fg uppercase"
           >
             {t.hero.secondaryCta}
           </a>
         </div>
 
-        <p className="mt-8 max-w-sm text-sm font-light text-fg-soft italic">
+        <p className="mt-8 max-w-sm text-sm font-normal leading-relaxed text-fg-soft italic">
           {t.hero.fineprint}
         </p>
       </div>

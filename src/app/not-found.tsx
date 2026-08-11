@@ -10,13 +10,13 @@ export default function NotFound() {
       <Link href="/" aria-label={t.nav.homeAriaLabel} className="mb-12">
         <WordMark className="h-4 w-auto text-fg" />
       </Link>
-      <p className="mb-4 text-[0.68rem] font-light tracking-[0.2em] text-fg-soft uppercase">
+      <p className="mb-4 text-[0.68rem] font-normal tracking-[0.2em] text-fg-soft uppercase">
         {t.notFound.eyebrow}
       </p>
       <h1 className="font-display max-w-md text-3xl font-thin text-balance sm:text-4xl">
         {t.notFound.headline}
       </h1>
-      <p className="mt-4 max-w-sm text-sm font-light text-fg-soft">
+      <p className="mt-4 max-w-sm text-sm font-normal leading-relaxed text-fg-soft">
         {t.notFound.body}
       </p>
       <Link
