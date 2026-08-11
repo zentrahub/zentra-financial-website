@@ -1,3 +1,4 @@
+import Link from "next/link";
 import WordMark from "./marks/WordMark";
 import ConsultationButton from "./ConsultationButton";
 
@@ -5,9 +6,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-10 border-b border-line bg-bg/95 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 sm:px-10">
-        <a href="#top" aria-label="Zentra Financial home">
+        <Link href="/#top" aria-label="Zentra Financial home">
           <WordMark className="h-4 w-auto text-fg" />
-        </a>
+        </Link>
 
         <div className="flex items-center gap-6 sm:gap-8">
           <details className="group relative">
@@ -20,18 +21,18 @@ export default function Header() {
               Menu
             </summary>
             <div className="absolute top-[calc(100%+1rem)] right-0 z-20 flex min-w-48 flex-col gap-4 border border-line bg-bg px-6 py-5">
-              <a
-                href="#expertise"
+              <Link
+                href="/#expertise"
                 className="text-xs font-light tracking-[0.08em] text-fg-soft uppercase transition hover:text-fg"
               >
                 Expertise
-              </a>
-              <a
-                href="#about"
+              </Link>
+              <Link
+                href="/#about"
                 className="text-xs font-light tracking-[0.08em] text-fg-soft uppercase transition hover:text-fg"
               >
                 About
-              </a>
+              </Link>
               <ConsultationButton className="text-left text-xs font-light tracking-[0.08em] text-fg-soft uppercase transition hover:text-fg">
                 Contact
               </ConsultationButton>

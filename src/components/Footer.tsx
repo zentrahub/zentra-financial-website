@@ -8,18 +8,18 @@ export default function Footer() {
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6">
         <WordMark className="h-3 w-auto text-fg-soft" />
         <div className="flex flex-wrap gap-6">
-          <a
-            href="#expertise"
+          <Link
+            href="/#expertise"
             className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
             Expertise
-          </a>
-          <a
-            href="#about"
+          </Link>
+          <Link
+            href="/#about"
             className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg"
           >
             About
-          </a>
+          </Link>
           <ConsultationButton className="text-[0.64rem] font-light tracking-[0.05em] text-fg-soft uppercase transition hover:text-fg">
             Private Consultation
           </ConsultationButton>
