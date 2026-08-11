@@ -69,8 +69,8 @@ export function ConsultationProvider({ children }: { children: ReactNode }) {
           if (e.target === dialogRef.current) close();
         }}
       >
-        <div className="max-h-[85vh] overflow-y-auto p-8 sm:p-10">
-          <div className="mb-6 flex items-start justify-between gap-4">
+        <div className="max-h-[85vh] overflow-y-auto p-9 sm:p-12">
+          <div className="mb-9 flex items-start justify-between gap-4">
             <div>
               <h3 className="font-display text-2xl font-extralight">
                 {t.title}
@@ -108,7 +108,7 @@ export function ConsultationProvider({ children }: { children: ReactNode }) {
           ) : (
             <form
               ref={formRef}
-              className="grid grid-cols-1 gap-5 sm:grid-cols-2"
+              className="grid grid-cols-1 gap-x-8 gap-y-7 sm:grid-cols-2"
               onSubmit={handleSubmit}
             >
               <Field label={t.fields.name} name="name" required />
@@ -139,7 +139,7 @@ export function ConsultationProvider({ children }: { children: ReactNode }) {
                 full
               />
 
-              <div className="col-span-full mt-2">
+              <div className="col-span-full mt-4">
                 <button
                   type="submit"
                   disabled={status === "submitting"}
@@ -190,7 +190,7 @@ function Field({
     <div className={full ? "col-span-full" : undefined}>
       <label
         htmlFor={fieldId(name)}
-        className="mb-2 block text-[0.62rem] font-normal tracking-[0.1em] text-fg-soft uppercase"
+        className="mb-3 block text-[0.62rem] font-normal tracking-[0.1em] text-fg-soft uppercase"
       >
         {label}
         {required && " *"}
@@ -200,7 +200,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="h-8 w-full border-0 border-b border-fg bg-transparent text-sm text-fg outline-none"
+        className="h-11 w-full border-0 border-b border-fg bg-transparent text-sm text-fg outline-none"
       />
     </div>
   );
@@ -219,7 +219,7 @@ function TextAreaField({
     <div className={full ? "col-span-full" : undefined}>
       <label
         htmlFor={fieldId(name)}
-        className="mb-2 block text-[0.62rem] font-normal tracking-[0.1em] text-fg-soft uppercase"
+        className="mb-3 block text-[0.62rem] font-normal tracking-[0.1em] text-fg-soft uppercase"
       >
         {label}
       </label>
@@ -248,7 +248,7 @@ function SelectField({
     <div>
       <label
         htmlFor={fieldId(name)}
-        className="mb-2 block text-[0.62rem] font-normal tracking-[0.1em] text-fg-soft uppercase"
+        className="mb-3 block text-[0.62rem] font-normal tracking-[0.1em] text-fg-soft uppercase"
       >
         {label}
       </label>
@@ -256,7 +256,7 @@ function SelectField({
         id={fieldId(name)}
         name={name}
         defaultValue=""
-        className="h-8 w-full border-0 border-b border-fg bg-transparent text-sm text-fg outline-none"
+        className="h-11 w-full border-0 border-b border-fg bg-transparent text-sm text-fg outline-none"
       >
         <option value="" disabled>
           {placeholder}

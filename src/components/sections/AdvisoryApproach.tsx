@@ -16,7 +16,7 @@ export default function AdvisoryApproach() {
               i > 0 ? "sm:border-l sm:border-line" : ""
             }`}
           >
-            <h3 className="font-display mb-3 text-sm font-normal tracking-[0.1em] text-accent uppercase">
+            <h3 className="font-display mb-3 text-base font-medium tracking-[0.14em] text-accent uppercase">
               {step.name}
             </h3>
             <p className="text-sm font-normal leading-relaxed text-fg-soft">

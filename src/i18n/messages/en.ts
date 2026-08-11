@@ -15,16 +15,16 @@ export const en = {
     menu: "Menu",
     expertise: "Expertise",
     about: "About",
-    contact: "Contact",
+    contact: "Private Consultation",
     clientPortal: "Client Portal",
-    requestConsultation: "Request a Private Consultation",
+    requestConsultation: "Request Private Consultation",
   },
 
   hero: {
     kicker: "Strategic Financial Advisory",
-    headline: "For businesses that have already proven themselves.",
+    headline: "Built for owners making bigger decisions.",
     sub: "Tax strategy, financial advisory and entity structuring for established business owners.",
-    primaryCta: "Request a Private Consultation",
+    primaryCta: "Request Private Consultation",
     secondaryCta: "Explore Our Expertise",
     fineprint:
       "We work selectively with established business owners, entrepreneurs and privately held companies.",
@@ -76,8 +76,8 @@ export const en = {
 
   selectiveEngagement: {
     headline: "Not every client needs Zentra.",
-    body: "Our work is most valuable when a business has reached a level where tax decisions, financial structure and entity strategy can materially affect the owner's outcome.",
-    cta: "Request a Private Consultation",
+    body: "Zentra delivers the greatest value when business decisions have meaningful financial and tax consequences.",
+    cta: "Request Private Consultation",
     fineprint:
       "Most new relationships begin through referral, introduction or a private consultation request.",
   },
