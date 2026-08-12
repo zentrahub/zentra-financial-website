@@ -16,7 +16,7 @@ export default function NotFound() {
       <h1 className="font-display max-w-md text-3xl font-thin text-balance sm:text-4xl">
         {t.notFound.headline}
       </h1>
-      <p className="mt-4 max-w-sm text-sm font-normal leading-relaxed text-fg-soft">
+      <p className="mt-4 max-w-sm text-[0.9375rem] font-normal leading-relaxed text-fg-soft sm:text-sm">
         {t.notFound.body}
       </p>
       <Link

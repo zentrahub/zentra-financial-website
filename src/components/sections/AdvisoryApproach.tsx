@@ -19,7 +19,7 @@ export default function AdvisoryApproach() {
             <h3 className="font-display mb-3 text-base font-medium tracking-[0.14em] text-accent uppercase">
               {step.name}
             </h3>
-            <p className="text-sm font-normal leading-relaxed text-fg-soft">
+            <p className="text-[0.9375rem] font-normal leading-relaxed text-fg-soft sm:text-sm">
               {step.description}
             </p>
           </div>

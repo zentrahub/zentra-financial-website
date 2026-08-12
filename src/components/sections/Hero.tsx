@@ -34,7 +34,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <p className="mt-8 max-w-sm text-sm font-normal leading-relaxed text-fg-soft italic">
+        <p className="mt-8 max-w-sm text-[0.9375rem] font-normal leading-relaxed text-fg-soft italic sm:text-sm">
           {t.hero.fineprint}
         </p>
       </div>

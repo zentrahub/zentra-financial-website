@@ -10,7 +10,7 @@ export default function LegalPlaceholder({ title }: { title: string }) {
         {t.legalPlaceholder.eyebrow}
       </p>
       <h1 className="font-display text-3xl font-thin">{title}</h1>
-      <p className="mt-6 text-sm font-normal leading-relaxed text-fg-soft">
+      <p className="mt-6 text-[0.9375rem] font-normal leading-relaxed text-fg-soft sm:text-sm">
         {t.legalPlaceholder.body}
       </p>
       <Link

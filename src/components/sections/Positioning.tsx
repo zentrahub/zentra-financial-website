@@ -12,7 +12,7 @@ export default function Positioning() {
         {t.positioning.statementPrefix}{" "}
         <span className="text-accent">{t.positioning.statementHighlight}</span>
       </p>
-      <p className="mx-auto mt-6 max-w-lg text-sm font-normal leading-relaxed text-fg-soft">
+      <p className="mx-auto mt-6 max-w-lg text-base font-normal leading-relaxed text-fg-soft sm:text-sm">
         {t.positioning.body}
       </p>
     </section>

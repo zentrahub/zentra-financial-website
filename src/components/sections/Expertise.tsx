@@ -36,7 +36,7 @@ export default function Expertise() {
                 >
                   {service.name}
                 </h3>
-                <p className="max-w-xl text-sm font-normal leading-relaxed text-fg-soft">
+                <p className="max-w-xl text-[0.9375rem] font-normal leading-relaxed text-fg-soft sm:text-sm">
                   {service.shortDescription}
                 </p>
               </div>

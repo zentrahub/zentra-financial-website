@@ -74,7 +74,7 @@ export default async function ServicePage({
                 <h2 className="font-display mb-2 text-base font-normal">
                   {item.title}
                 </h2>
-                <p className="text-sm font-normal leading-relaxed text-fg-soft">
+                <p className="text-[0.9375rem] font-normal leading-relaxed text-fg-soft sm:text-sm">
                   {item.description}
                 </p>
               </div>
@@ -95,7 +95,7 @@ export default async function ServicePage({
           <h2 className="font-display text-2xl font-thin sm:text-3xl">
             {t.selectiveEngagement.headline}
           </h2>
-          <p className="mx-auto mt-5 max-w-md text-sm font-normal leading-relaxed text-fg-soft">
+          <p className="mx-auto mt-5 max-w-md text-base font-normal leading-relaxed text-fg-soft sm:text-sm">
             {t.selectiveEngagement.body}
           </p>
           <div className="mt-8">
